@@ -62,9 +62,9 @@ $(function () {
   $("#con02 li img").on("mouseleave", function () {
     $(this).stop().animate({ "border-radius": "0" });
   });
-  let i = $("#con01 img");
-  $("#con01 img").fadeOut();
-  $("#con01 img").eq(i).fadeIn();
+  $("con01 li a").animate({ top: "-150px" }, 500, function () {
+    $(this).animate({ top: "150px" }, 500);
+  });
 });
 // if (scroll >= con01 && scroll < con02) {
 

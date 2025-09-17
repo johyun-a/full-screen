@@ -88,7 +88,7 @@ section#con04 {
   margin: 0px auto;
   position: relative;
 }
-#con01 img {
+/* #con01 img {
   width: 50%;
   height: 50%;
   object-fit: cover;
@@ -100,7 +100,7 @@ section#con04 {
 }
 #con01 img:first-child {
   display: block;
-}
+} */
 
 #con01 ul {
   display: flex;
@@ -113,8 +113,9 @@ section#con04 {
   color: #222;
   z-index: 10;
 }
-#con01 a {
+#con01 li a {
   padding: 20px;
+  position: relative;
 }
 /* #con02 */
 #con02 ul {
@@ -132,6 +133,7 @@ section#con04 {
   transform: translateY(100px);
   opacity: 0;
   transition: 1s;
+  z-index: 11;
 }
 #con02.on li {
   transform: translateY(0px);
