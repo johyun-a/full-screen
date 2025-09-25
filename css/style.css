@@ -24,7 +24,7 @@ header h1 {
 }
 header h1 a {
   color: rgb(105, 167, 238);
-  border-radius: 10px 30px 10px 30px;
+  border-radius: 20%;
   width: 80px;
   height: 20px;
   line-height: 20px;
@@ -39,6 +39,7 @@ header h1 a:hover {
 header ul {
   display: flex;
   width: 100%;
+  opacity: 70%;
 }
 /* positon:absolute 하면 쓴것만큼만 크기가 차지되니까 너비 100%주면 됨 */
 header li {
@@ -166,18 +167,29 @@ section#con04 {
   justify-content: center;
   align-items: center;
   perspective: 800px;
+  position: relative;
 }
+/* #con03 h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(50% 50%);
+  color: white;
+  font-size: 30px;
+  z-index: 10;
+} */
 /* perspective: 800px
 ==> 숫자가 많이 크면 원근감이 잘 안느껴짐 */
 #con03 .txt {
   width: 60%;
   height: 60%;
-  background: #fff;
+  /* background: #fff; */
   transform: rotateY(0deg);
-  opacity: 0;
   transition: 1s;
+  /* opacity: 0; */
+  z-index: 20;
 }
-#con03 .txt img {
+#con03 .txt video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -185,7 +197,7 @@ section#con04 {
 
 #con03.on .txt {
   transform: rotateY(180deg);
-  opacity: 1;
+  /* opacity: 1; */
 }
 /* navi*/
 #navi {
@@ -214,4 +226,34 @@ section#con04 {
 }
 #navi li.on span {
   display: block;
+}
+/*con04 */
+#con04 {
+  width: 100%;
+  position: relative;
+}
+#con04 .num {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+#con04 ul {
+  width: 80%;
+  height: 50px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+#con04 .box_1 {
+  background: #e473e4;
+}
+#con04 .box_2 {
+  background: #d168d1;
+}
+#con04 .box_3 {
+  background: #b95db9;
+}
+#con04 li {
+  padding: 5px 20px;
 }

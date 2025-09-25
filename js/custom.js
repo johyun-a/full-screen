@@ -62,8 +62,30 @@ $(function () {
   $("#con02 li img").on("mouseleave", function () {
     $(this).stop().animate({ "border-radius": "0" });
   });
-  $("con01 li a").animate({ top: "-150px" }, 500, function () {
-    $(this).animate({ top: "150px" }, 500);
+  $("#con01 li a")
+    .stop()
+    .animate({ top: "-80px" }, 500, function () {
+      $(this).animate({ top: "80px" }, 500);
+    });
+  $("#con01 li").on("click", function () {
+    $("html").animate({ scrollTop: con02 });
+  });
+  // $("#con03 h2").on("click", function () {
+  //   let $txt = $(this).next(".txt"); // h2 다음 .txt
+  //   let $video = $txt.find("video"); // 그 안의 video
+  //   let vid = $video.get(0);
+
+  //   $(this).hide(); // h2 숨기기
+  //   $txt.addClass("on"); // .txt 보이게 (CSS transition 발동)
+  //   $video.show(); // 비디오 보이기
+  //   vid.currentTime = 0; // 처음부터 재생
+  //   vid.play();
+  // });==> 안됨
+  $("#con04 ul").on("mouseenter", function () {
+    $(this).css({ height: "100px" });
+  });
+  $("#con04 ul").on("mouseleave", function () {
+    $(this).css({ height: "50px" });
   });
 });
 // if (scroll >= con01 && scroll < con02) {
